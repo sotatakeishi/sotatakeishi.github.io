@@ -1,1 +1,71 @@
-ddddddddddddd
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4-01_input</title>
+<link rel="shortcut icon" href="../../_common/images/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+<h1>腹黒診断</h1>
+
+</div><!-- /.container -->
+<form name="myForm">
+  <input type="checkbox" value="1">aaaaa<br>
+  <input type="checkbox" value="1">aaaaa<br>
+  <input type="checkbox" value="2">aaaaa<br>
+  <input type="checkbox" value="2">aaaa<br>
+  <input type="checkbox" value="3">aaaa<br>
+  <input type="checkbox" value="3">aaaaa<br>
+  <input type="checkbox" value="4">aaaaa<br>
+  <input type="checkbox" value="4">aaaaa<br>
+  <input type="checkbox" value="5">aaaa<br>
+  <input type="checkbox" value="5">aaaaa<br>
+  <input type="button" onclick="myCheck()" value="診断"><br>
+  </form>
+<script >
+  function myCheck(){
+  
+  answer = 0;
+  for ( i=0; i<document.myForm.length-1; i++ ){
+  if ( document.myForm.elements[i].checked == true ){
+  answer++;
+  
+  }
+  
+  }  
+  
+  if (  answer == 0 ) 
+  message = "☆☆☆☆☆　　";
+ 
+  else if (  answer <= 1 )
+   message = "★☆☆☆☆　　";
+ 
+  else if (  answer <= 3 )
+   message = "★★☆☆☆　　";
+  
+  else if (  answer <= 5  )
+   message = "★★★☆☆　　";
+  else if (  answer <= 7 )
+   message = "★★★☆☆　　";
+ 
+  else if (  answer <= 9  )
+   message = "★★★★☆　 ";
+ 
+  
+  else if (  answer == 10  )
+   message = "★★★★★　　";
+  
+  
+  
+  myComment = "診断結果" + message ;
+  
+  window.alert ( myComment );
+  
+  }
+  
+  </script>
