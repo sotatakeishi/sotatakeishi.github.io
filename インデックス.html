@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  
+  
+  <div class="container">
+性格診断
+    <form name="myForm2">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-1"name="myQ1">
+        <label class="custom-control-label" for="custom-check-1">自分から積極的に取り組んでいるか</label>
+      </div>
+     
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-2"name="myQ2">
+        <label class="custom-control-label" for="custom-check-2">コミュニケーションか得意な方だ</label>
+      </div>
+     
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-3"name="myQ3">
+        <label class="custom-control-label" for="custom-check-3">すぐ不安になってしまう</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-4"name="myQ4">
+        <label class="custom-control-label" for="custom-check-4">几帳面である</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-5"name="myQ5">
+        <label class="custom-control-label" for="custom-check-5">人間関係は上手くいっている</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-6"name="myQ6">
+        <label class="custom-control-label" for="custom-check-6">友達か多い</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-7"name="myQ7">
+        <label class="custom-control-label" for="custom-check-7">勉強を1日５時間以上している</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-8"name="myQ8">
+        <label class="custom-control-label" for="custom-check-8">自分から進んで学ぶ事か多</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-9"name="myQ9">
+        <label class="custom-control-label" for="custom-check-9">正直者と言われる</label>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="custom-check-10"name="myQ10">
+        <label class="custom-control-label" for="custom-check-10">人と話すと気が楽になる</label>
+      </div>
+      
+     
+
+<input type="button" onclick="myQA2()" value="診断"><br>
+</form>
+<DIV id="myMess"></DIV>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+<script type="text/javascript"><!--	
+  function myQA2(){	
+  myHantei="";	// 判定結果のタグ
+  if (document.myForm2.myQ1.checked == true && document.myForm2.myQ2.checked == true){	// Q1 と Q2 にチェックしている
+  myHantei += "<div>あなたは社交的です</div>";	
+  }	
+  if (document.myForm2.myQ3.checked == true && document.myForm2.myQ4.checked == true){	// Q３ と Q４ にチェックしている
+  myHantei += "<div>あなたは几帳面です</div>";	
+  }	
+  if (document.myForm2.myQ5.checked == true && document.myForm2.myQ6.checked == true){	// Q５ と Q６ にチェックしている
+  myHantei += "<div>あなたは協調性が高いです</div>";	
+  }	
+  if (document.myForm2.myQ7.checked == true && document.myForm2.myQ8.checked == true){	// Q７ と Q８ にチェックしている
+  myHantei += "<div>あなたは勉強家です</div>";	
+  }	
+  if (document.myForm2.myQ9.checked == true && document.myForm2.myQ10.checked == true){	// Q９ か Q１０ にチェックしている
+  myHantei += "<div>あなたはコミュニケーション能力が高いです</div>";	
+  }	
+  if (document.myForm2.myQ1.checked == true || document.myForm2.myQ2.checked == true|| document.myForm2.myQ3.checked == true|| document.myForm2.myQ10.checked == true|| document.myForm2.myQ4.checked == true|| document.myForm2.myQ5.checked == true|| document.myForm2.myQ6.checked == true|| document.myForm2.myQ7.checked == true|| document.myForm2.myQ8.checked == true|| document.myForm2.myQ9.checked == true){	// Q９ か Q１０ にチェックしている
+  myHantei += "<div>あなたはノーマルタイプです</div>";	
+  }	
+  if ( myHantei == "" ){	// １つもチェックしていなかった
+  myHantei += "<div>あなたは無能です</div>";	
+  }	
+  myHantei = "<strong>判定結果</strong><BR>" + myHantei;	
+  document.getElementById( "myMess" ).innerHTML = myHantei;	
+  }	
+  // --></script>	
