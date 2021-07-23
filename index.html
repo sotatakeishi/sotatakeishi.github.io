@@ -20,64 +20,70 @@
   
   
   <div class="container">
-性格診断
+    <div class="alert alert-primary" role="alert">
+      <h1>性格診断</h1>
+    </div> 
+    
+    <div class="rounded border border-primary"  >
     <form name="myForm2">
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="custom-check-1"name="myQ1">
+      <div class="px-5 custom-control custom-checkbox">
+        <input type="checkbox" class=" custom-control-input" id="custom-check-1"name="myQ1">
         <label class="custom-control-label" for="custom-check-1">自分から積極的に取り組んでいるか</label>
       </div>
      
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-2"name="myQ2">
         <label class="custom-control-label" for="custom-check-2">コミュニケーションか得意な方だ</label>
       </div>
      
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-3"name="myQ3">
         <label class="custom-control-label" for="custom-check-3">すぐ不安になってしまう</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-4"name="myQ4">
         <label class="custom-control-label" for="custom-check-4">几帳面である</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-5"name="myQ5">
         <label class="custom-control-label" for="custom-check-5">人間関係は上手くいっている</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-6"name="myQ6">
         <label class="custom-control-label" for="custom-check-6">友達か多い</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-7"name="myQ7">
         <label class="custom-control-label" for="custom-check-7">勉強を1日５時間以上している</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-8"name="myQ8">
         <label class="custom-control-label" for="custom-check-8">自分から進んで学ぶ事か多</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-9"name="myQ9">
         <label class="custom-control-label" for="custom-check-9">正直者と言われる</label>
       </div>
       
-      <div class="custom-control custom-checkbox">
+      <div class="px-5 custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="custom-check-10"name="myQ10">
         <label class="custom-control-label" for="custom-check-10">人と話すと気が楽になる</label>
       </div>
-      
-     
+      </div>
 
-<input type="button" onclick="myQA2()" value="診断"><br>
+<button type="button" class="mt-2 btn btn-primary"  onclick="myQA2()">診断</button>
+
 </form>
+<div class="mt-2 border border-5">
 <DIV id="myMess"></DIV>
   </div>
+</div>
 
 </body>
 
@@ -110,7 +116,7 @@
   if ( myHantei == "" ){	// １つもチェックしていなかった
   myHantei += "<div>あなたは無能です</div>";	
   }	
-  myHantei = "<strong>判定結果</strong><BR>" + myHantei;	
+  myHantei = "<strong>診断結果</strong><BR>" + myHantei;	
   document.getElementById( "myMess" ).innerHTML = myHantei;	
   }	
   // --></script>	
