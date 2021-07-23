@@ -92,7 +92,7 @@
 
 
 
-<script type="text/javascript"><!--	
+<script type="text/javascript">
   function myQA2(){	
   myHantei="";	// 判定結果のタグ
   if (document.myForm2.myQ1.checked == true && document.myForm2.myQ2.checked == true){	// Q1 と Q2 にチェックしている
@@ -110,13 +110,13 @@
   if (document.myForm2.myQ9.checked == true && document.myForm2.myQ10.checked == true){	// Q９ か Q１０ にチェックしている
   myHantei += "<div>あなたはコミュニケーション能力が高いです</div>";	
   }	
-  if (document.myForm2.myQ1.checked == true || document.myForm2.myQ2.checked == true|| document.myForm2.myQ3.checked == true|| document.myForm2.myQ10.checked == true|| document.myForm2.myQ4.checked == true|| document.myForm2.myQ5.checked == true|| document.myForm2.myQ6.checked == true|| document.myForm2.myQ7.checked == true|| document.myForm2.myQ8.checked == true|| document.myForm2.myQ9.checked == true){	// Q９ か Q１０ にチェックしている
-  myHantei += "<div>あなたはノーマルタイプです</div>";	
-  }	
+  
   if ( myHantei == "" ){	// １つもチェックしていなかった
-  myHantei += "<div>あなたは無能です</div>";	
+  myHantei = "<div>あなたはノーマルタイプです</div>";	
   }	
+
   myHantei = "<strong>診断結果</strong><BR>" + myHantei;	
   document.getElementById( "myMess" ).innerHTML = myHantei;	
   }	
-  // --></script>	
+  </script>	
+      
